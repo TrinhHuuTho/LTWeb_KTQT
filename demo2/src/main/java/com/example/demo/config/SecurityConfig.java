@@ -54,6 +54,7 @@ public class SecurityConfig {
 				.authorizeHttpRequests(auth -> auth
 						.requestMatchers("/user/new").permitAll()
 						.requestMatchers("/").permitAll()
+						.requestMatchers("/hello").permitAll()
 						.requestMatchers("/customer/**").authenticated())
 				.formLogin(Customizer.withDefaults())
 				.build();
